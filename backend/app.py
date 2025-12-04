@@ -8,9 +8,8 @@ import pickle
 import os
 
 app = Flask(__name__)
-CORS(app)  # Allow frontend to talk to backend
+CORS(app)
 
-# Load everything at startup
 print("Loading movie data...")
 movies = pd.read_csv('archive/tmdb_5000_movies.csv')
 movies = movies[movies['overview'].notna()]
@@ -32,8 +31,7 @@ def recommend():
     
     if not movie_titles:
         return jsonify({'error': 'No movies provided'}), 400
-    
-    # Find the movies
+  
     user_movies = []
     found_movies = []
     
@@ -45,8 +43,7 @@ def recommend():
     
     if len(user_movies) == 0:
         return jsonify({'error': 'No matching movies found'}), 404
-    
-    # Get recommendations
+   
     user_embeddings = embeddings[user_movies]
     user_taste = np.mean(user_embeddings, axis=0).reshape(1, -1)
     similarities = cosine_similarity(user_taste, embeddings)[0]
