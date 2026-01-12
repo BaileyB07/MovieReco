@@ -19,7 +19,6 @@ Enter movies you like, and the AI will analyze their plots to recommend similar 
 
 ## Why this approach
 Instead of a traditional genre or rating based filtering, this project explores embedding-based similarity, allowing recommendations based on deeper semantic meaning in movie plots.
-## Setup & Run
 
 ## Features
 - Smart fuzzy matching (finds movies even with partial names)
@@ -42,5 +41,5 @@ Instead of a traditional genre or rating based filtering, this project explores 
 - Working with embeddings and similarity matching
 -Integrating ML logic into a simple full-stack application
 
----
+
 _This project was built with focus on understanding integration between AI/ML and Full stack rather than optimizing for production._
