@@ -1,15 +1,15 @@
 # 🎬 AI Movie Recommender
 
-An intelligent movie recommendation system that uses AI to suggest movies based on your favorites.
+An AI powered movie recommendation system that suggests similar movies based on semantic similarity between plot descriptions.
 
 ## What it does
-Enter movies you like, and the AI will analyze their plots to recommend similar movies you might enjoy.
+User inputs movies they like and the system analyzes plot descriptions to recommend similar movies using semantic similarity rather than simple keyword matching.
 
 ## Tech Stack
 - **Backend**: Python, Flask, Sentence Transformers
 - **Frontend**: HTML, CSS, JavaScript
 - **AI/ML**: Sentence embeddings for semantic similarity matching
-- **Dataset**: TMDB 5000 Movie Dataset
+- **Dataset**: TMDB 5000 Movie Dataset from Kaggle
 
 ## How it works
 1. Loads 4800+ movies from TMDB dataset
